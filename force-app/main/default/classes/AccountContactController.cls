@@ -1,14 +1,11 @@
 public with sharing class AccountContactController {
 
-
+    //Constructor
     public AccountContactController() {
-
-    
-    
     }
 
 
-
+    //Get contacts
     @AuraEnabled
     public static List<contact> getcontacts(string accountName){
         try {
@@ -20,7 +17,7 @@ public with sharing class AccountContactController {
        
     }
 
-
+    //Delete Contacts
     @AuraEnabled
     public static void deleteSelectedContacts(List<Contact> contactLst) {
         delete contactLst;
