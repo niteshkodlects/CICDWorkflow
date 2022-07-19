@@ -30,7 +30,7 @@ jobs:
             
             
     action-pull-request:
-    permissions: write-all
+    
       runs-on: ubuntu-latest
       steps:
       - name: Checkout repoistory
@@ -39,7 +39,7 @@ jobs:
           fetch-depth: 0
       - name: Run the Action
         if: startsWith(github.ref, 'refs/heads/feature')
-        uses: devops-infra/action-pull-request@v0.4.2
+        uses: CICDWorkflow/action-pull-request@v0.4.2
         with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
             title: Automatic pull request                           
