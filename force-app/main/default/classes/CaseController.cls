@@ -1,4 +1,4 @@
-public class CaseController {
+public with sharing class CaseController {
     
 
 
