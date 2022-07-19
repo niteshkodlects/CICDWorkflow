@@ -1,3 +1,4 @@
+name: Pull to Development
 on:
   pull_request:
     branches: [ development ]
