@@ -1,4 +1,4 @@
-public  class SearchService {
+public with sharing class SearchService {
     public SearchService() {
 
     }
