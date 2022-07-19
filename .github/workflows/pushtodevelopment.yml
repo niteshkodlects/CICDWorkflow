@@ -1,4 +1,4 @@
-Push to Development
+name: Push to Development
 
 on:
   push:
