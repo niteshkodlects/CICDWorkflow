@@ -13,7 +13,7 @@ public with sharing class AccountService {
         return [select id,Name from Account where type=:Type];
 
     }
-
+ //getAccountWithSearch
     @AuraEnabled(cacheable=true)
     public static list<account> getAccountWithSearch(string searchText) {
       searchText='%' +searchText+'%';
