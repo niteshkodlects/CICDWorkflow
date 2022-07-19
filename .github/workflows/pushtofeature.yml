@@ -45,14 +45,14 @@ jobs:
             get_diff: true
       #approve pull request      
       - name: Approve Pull Request
-        uses: niteshkodlects/CICDWorkflow/approve-pull-request-action@v1
+        uses: niteshkodlects/CICDWorkflow/approve-pull-request-action@v2
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           number: 1
      
      #merge pull request    
       - name: Merge Pull Request
-        uses: niteshkodlects/CICDWorkflow/merge-pull-request-action@v1
+        uses: niteshkodlects/CICDWorkflow/merge-pull-request-action@v2
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           number: 1
