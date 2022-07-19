@@ -38,21 +38,21 @@ jobs:
           fetch-depth: 0
       - name: Run the Action
         if: startsWith(github.ref, 'refs/heads/feature')
-        uses: devops-infra/action-pull-request@v0.4.2
+        uses: niteshkodlects/action-pull-request@v0.4.2
         with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
             title: Automatic pull request                           
             get_diff: true
       #approve pull request      
       - name: Approve Pull Request
-        uses: juliangruber/approve-pull-request-action@v1
+        uses: niteshkodlects/approve-pull-request-action@v1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           number: 1
      
      #merge pull request    
       - name: Merge Pull Request
-        uses: juliangruber/merge-pull-request-action@v1
+        uses: niteshkodlects/merge-pull-request-action@v1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           number: 1
