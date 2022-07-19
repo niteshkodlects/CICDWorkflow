@@ -1,6 +1,6 @@
 Trigger  AccountTrigger on Account(after update,after insert){
 	
-	//comment
+	//comment   
 		If(Trigger.IsAfter){
 			If(Trigger.IsInsert){
 			//AccountHandler.afterInsertUpdateContactPhone(Trigger.New);
