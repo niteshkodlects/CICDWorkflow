@@ -20,7 +20,7 @@ public class with sharing AccountService {
         return [select id,Name from Account where name like:searchText];
 
     }
-//add comment
+//add comment getAccount
     @AuraEnabled(cacheable=true)
     public static list<account> getAccount(string searchText) {
         list<list<sObject>> acc =[FIND :searchText IN ALL fields returning Account(Name) ];
