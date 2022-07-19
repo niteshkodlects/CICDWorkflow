@@ -1,3 +1,5 @@
+name: Deploy to Sandbox FWI22
+
 on:
   pull_request:
     branches: [ featureWI22 ]
