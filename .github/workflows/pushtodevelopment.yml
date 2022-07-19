@@ -1,4 +1,4 @@
-name: Deploy to sandbox on push to dev
+name: Deploy on pull merge to dev
 on:
   push:
     branches: [ development ]
