@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Account Details -->">
+        <lightning-input label="Search Text" onchange={changeHandler}></lightning-input>
+
+        <template if:true={accountList.data}>
+            <template for:each={accountList.data} for:item="acc">
+                            <div key={acc.id}>{acc.Name}</div>
+            </template>
+        </template>
+            <template if:true={accounts.data}>
+                <template for:each={accounts.data} for:item="acc">
+                    <div key={acc.id}>{acc.Name}</div>
+
+                </template>
+            </template>
+    </lightning-card>
+    
+</template>
