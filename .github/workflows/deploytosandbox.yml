@@ -1,3 +1,4 @@
+name: Deploy to Org on pull FW22
 on:
   pull_request:
     branches: [ featureWI22 ]
