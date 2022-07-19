@@ -1,4 +1,4 @@
-name: Deploy to Org on pull FW22
+name: Deploy on pull from Feature
 on:
   pull_request:
     branches: [ featureWI22 ]
