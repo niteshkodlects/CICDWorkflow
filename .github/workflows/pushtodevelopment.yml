@@ -1,5 +1,4 @@
-name: Push to Development
-
+name: Deploy to sandbox on push to dev
 on:
   push:
     branches: [ development ]
