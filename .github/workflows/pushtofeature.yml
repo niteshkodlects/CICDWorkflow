@@ -44,9 +44,8 @@ jobs:
             title: Automatic pull request                           
             source_branch: featureWI22
             target_branch: development
-            title: Automatic pull request
             body: body
-            reviewer: "niteshkodle"
+            reviewer: niteshkodle
             assignee: niteshkodlects
             label: label
             
