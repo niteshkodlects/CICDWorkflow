@@ -41,10 +41,10 @@ jobs:
         uses: devops-infra/action-pull-request@v0.4.2
         with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
-            title: Automatic pull request                           
+            title: ${{ github.event.head_commit.message }}                           
             source_branch: featureWI22
             target_branch: development
-            body: body
+            body: ${{ github.event.head_commit.message }}
             reviewer: niteshkodle
             assignee: niteshkodlects
             label: label
