@@ -1,4 +1,4 @@
-public class AccountService {
+public class with sharing AccountService {
     @AuraEnabled
     public static string methodName(){
         try {
