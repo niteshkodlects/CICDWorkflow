@@ -42,13 +42,5 @@ jobs:
         with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
             title: Automatic pull request                           
-            get_diff: true
-      #approve pull request      
-      - name: Approve Pull Request
-        uses: juliangruber/approve-pull-request-action@v1
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          number: 1
-     
-     #merge pull request    
+               
      
