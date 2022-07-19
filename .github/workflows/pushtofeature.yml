@@ -1,6 +1,8 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Push To Feature
+
+name: Push to Feature run PMD
+
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
@@ -41,10 +43,10 @@ jobs:
         uses: devops-infra/action-pull-request@v0.4.2
         with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
-            title: Automatic pull request                           
+            title: ${{ github.event.head_commit.message }}                           
             source_branch: featureWI22
             target_branch: development
-            body: body
+            body: ${{ github.event.head_commit.message }}
             reviewer: niteshkodle
             assignee: niteshkodlects
             label: label
