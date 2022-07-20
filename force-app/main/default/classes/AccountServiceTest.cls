@@ -2,10 +2,22 @@
 private class AccountServiceTest {
     @isTest static void myTest() {
         AccountService.getAccounts('None');
-        account a=new Account(name='abc')
+       
+        account a=new Account(name='abc');
         insert a;
-        insert   Opportunity testOpportunity = new Opportunity(Name = 'Test Opp', CloseDate = Date.today(), accountid=a.id,StageName = 'Qualification');
+        a.name='aa';
+        update a;
+        
+         Contact con = new Contact(
+        FirstName='Joe',
+        LastName='Smith',
+        Phone='415.555.1212',IsPrimary__c=true,
+        AccountId=a.ID);
+    insert con;
+   Opportunity testOpportunity = new Opportunity(Name = 'Test Opp', CloseDate = Date.today(), accountid=a.id,StageName = 'Qualification');
         insert testOpportunity;
+        testOpportunity.name='ddd';
+        update testOpportunity;
         System.assertEquals(21.11,21.11);
 
     }
