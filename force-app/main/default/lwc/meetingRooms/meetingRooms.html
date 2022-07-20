@@ -1,0 +1,8 @@
+<template>
+    <template for:each={meetingRooms} for:item="room">
+        <div key={room.roomName}>
+            <c-meeting-room meeting-room-info={room} ontileclick={handleRoom}></c-meeting-room>
+        </div>
+    </template>
+    {roomDetail}
+</template>

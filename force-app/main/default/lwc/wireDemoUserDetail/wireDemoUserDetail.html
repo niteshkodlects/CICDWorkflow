@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Account Detail">
+
+ 
+ <lightning-combobox name="Type" options={pickOptions} value={selectedType} onchange={typeHandler} ></lightning-combobox>
+        <div class="slds-var-p-around_medium">
+            <template if:true={accountList.data}>
+
+                <template for:each={accountList.data} for:item="account">
+                    <div key={account.id}>{account.Name}</div>
+    
+                </template>
+           
+            </template>
+
+        </div> 
+    </lightning-card>
+</template>

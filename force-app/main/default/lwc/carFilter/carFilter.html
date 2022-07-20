@@ -1,0 +1,49 @@
+<template>
+   <lightning-card title="Filters" icon-name="standard:calibration">
+    <div class="slds-m-horzontal_medium">
+
+        <lightning-input label="Search Key" type="each" value={filter.searchKey} onchange={handleSearchKeyChange}></lightning-input>
+        <section>
+            <lightning-slider label="Max price" max="999999" step="100" min="0" value={filter.maxPrice} onchange={handleMaxPriceChange}>
+
+            </lightning-slider>
+        </section>
+        
+        <section>
+            <h2>Category</h2>
+            <template if:true={categories.data}>
+                <template for:each={categories.data.values} for:item="category">
+
+                
+                <lightning-input type="checkbox" key={category.value} label={category.label} data-value={category.value} data-name="category" checked  onchange={handleCheckbox}></lightning-input>
+            </template>
+            </template>
+
+            <template if:true={categories.error}>
+                Failed to Load
+            </template>
+         
+        </section>
+        <section>
+            <h2>Make</h2>
+            <template if:true={makers.data}>
+                <template for:each={makers.data.values} for:item="maker">
+
+                
+                    <lightning-input type="checkbox" key={maker.value} label={maker.label} data-value={maker.value}  data-name="maker" checked  onchange={handleCheckbox}>
+
+                    </lightning-input>
+                </template>
+                
+
+            </template>
+
+            <template if:true={makers.error}>
+                Failed to Load
+            </template>
+            
+        </section>
+    
+    </div>
+</lightning-card>
+</template>

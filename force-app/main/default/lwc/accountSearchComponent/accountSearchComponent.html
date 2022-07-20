@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Account Search  ">
+        
+        <template if:true={accounts.data}>
+            <template for:each={accounts.data} for:item="acc">
+              <div key={acc.Id}> 
+                {acc.Name} 
+             </div>        </template>
+            
+        </template>
+    </lightning-card>
+</template>

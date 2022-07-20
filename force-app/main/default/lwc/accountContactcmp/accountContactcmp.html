@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="Search account">
+
+
+        <lightning-input label="Search Account" onchange={onKeyChange}></lightning-input>
+        <lightning-button label="Search" onclick={onClickHandler}></lightning-button>
+    </lightning-card>
+
+    <template if:true={contacts}>
+    <lightning-datatable
+    key-field="Id"
+    data={contacts}
+    columns={columns}
+    onsave={handleSave}
+    draft-values={draftValues}
+    onrowselection={handleDelete}
+    >
+</lightning-datatable>
+
+
+<div class="slds-align_absolute-center">
+    <lightning-button label={buttonLabel} icon-name="utility:delete" disabled={isTrue}
+        variant="destructive" onclick={deleteRecords}>
+    </lightning-button>
+</div>
+</template>
+</template>
+</template>

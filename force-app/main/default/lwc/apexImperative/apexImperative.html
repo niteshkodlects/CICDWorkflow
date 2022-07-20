@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Apex Method call">
+
+   
+    <lightning-button variant="brand" label="Call Apex" onclick={handleClick}></lightning-button>
+
+    <div class="slds-var-p-around_medium">
+        <template if:true={accountList}>
+
+            <template for:each={accountList} for:item="account">
+                <div key={account.id}>{account.Name}</div>
+
+            </template>
+       
+        </template>
+
+    </div> 
+    </lightning-card>
+</template>

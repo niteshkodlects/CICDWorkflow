@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Case Search">
+        <lightning-input label="Search Text" onchange={changeHandler}></lightning-input>
+        
+        
+            <template for:each={caseList} for:item="account">
+                        <div key={account.id}>{account.name}</div>
+
+            </template>
+        
+
+    </lightning-card>
+</template>

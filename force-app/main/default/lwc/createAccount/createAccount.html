@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="Create Account">
+        <lightning-layout>
+                <lightning-layout-item >
+                    <lightning-input type="text" label="FirstName" onchange={firstNameHandler}></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item >
+                    <lightning-input type="text" label="LastName" onchange={lastNameHandler}></lightning-input>
+                </lightning-layout-item>
+
+        </lightning-layout>
+        <lightning-button type="submit" variant="brand" label="Create Account" onclick={createAccount}></lightning-button>
+        
+
+
+    </lightning-card>
+<lightning-card title="Account Detail">
+    <lightning-record-view-form object-api-name="Account" record-id={recordId} >
+
+        <p><lightning-output-field field-name="Name"></lightning-output-field></p>
+    </lightning-record-view-form>
+    <lightning-record-edit-form object-api-name="Account" record-id={recordId} layout-type="FULL"></lightning-record-edit-form>
+
+</lightning-card>
+
+</template>
