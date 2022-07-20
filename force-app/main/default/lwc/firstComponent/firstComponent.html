@@ -1,0 +1,23 @@
+<template>
+    <lightning-card  title="Hello">
+        <lightning-input label="New" type="text" onkeyup={changeHandler}></lightning-input>
+        <p class="slds-p-horizontal_small">Card Body {title}</p>
+        
+    </lightning-card>
+
+    <lightning-card  title="@track Check">
+        <lightning-input label="New" type="Enter City" onkeyup={trackHandler}></lightning-input>
+        <p class="slds-p-horizontal_small">Card Body {address.city}</p>
+      
+    </lightning-card>
+
+
+    <lightning-card  title="Getter Demo">
+        
+        <p class="slds-p-horizontal_small">Card Body {getName}</p>
+      
+        <template for:each={users} for:item="car">
+            <div key={car}>{car}</div>
+        </template>
+    </lightning-card>
+</template>

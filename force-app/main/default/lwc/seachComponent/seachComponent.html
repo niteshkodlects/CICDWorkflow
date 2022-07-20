@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Search">
+
+        <lightning-input onchange={changeHandler} label="Enter Criteria"></lightning-input>
+
+        
+        
+    </lightning-card>
+    <lightning-card title="Result">
+        <template if:true={accounts.data}>
+            
+            <template for:each={accounts.data} for:item="acc">
+                <div key={acc.id}>
+                    {acc.name}
+                </div>
+            </template>
+        </template>
+</lightning-card>
+</template>

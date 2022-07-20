@@ -7,13 +7,14 @@ public with sharing class AccountService {
             throw new AuraHandledException(e.getMessage());
         }
     }
+    //
     @AuraEnabled(cacheable=true)
     public static list<account> getAccounts(string Type) {
 
         return [select id,Name from Account where type=:Type];
 
     }
- //getAccountWithSearch
+
     @AuraEnabled(cacheable=true)
     public static list<account> getAccountWithSearch(string searchText) {
       searchText='%' +searchText+'%';
