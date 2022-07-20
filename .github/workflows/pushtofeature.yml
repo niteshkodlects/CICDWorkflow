@@ -28,10 +28,8 @@ jobs:
             # Run PMD scan
             - name: 'Run PMD scan'
               id: pmd-full-analysis
-              run: ~/pmd/bin/run.sh pmd -d force-app -R pmd/ruleset.xml 
-              if: steps.pmd-full-analysis.outputs.violations != 0
-               run: exit 1
-            
+              run: ~/pmd/bin/run.sh pmd -d force-app -R pmd/ruleset.xml -f text
+              
     action-pull-request:
       runs-on: ubuntu-latest
       steps:
