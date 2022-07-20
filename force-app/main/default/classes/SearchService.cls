@@ -1,7 +1,8 @@
-public  class SearchService {
+public with sharing  class SearchService {
     public SearchService() {
 
     }
+//comment
 
     @AuraEnabled(cacheable=true)
     public static list<Account> getAccounts(string searchText){
