@@ -7,6 +7,7 @@ public with sharing class AccountService {
             throw new AuraHandledException(e.getMessage());
         }
     }
+    //
     @AuraEnabled(cacheable=true)
     public static list<account> getAccounts(string Type) {
 

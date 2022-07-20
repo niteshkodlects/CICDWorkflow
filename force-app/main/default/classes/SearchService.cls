@@ -2,7 +2,7 @@ public with sharing  class SearchService {
     public SearchService() {
 
     }
-//comment
+//comment   
 
     @AuraEnabled(cacheable=true)
     public static list<Account> getAccounts(string searchText){

@@ -3,7 +3,7 @@
    Guest users are never able to access this page.
  */
 public with sharing class MyProfilePageController {
-
+//
     private User user;
     private boolean isEdit = false;
 

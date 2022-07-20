@@ -4,7 +4,7 @@ public with sharing class LWCExampleController {
         // Decoding base64Data
         base64Data = EncodingUtil.urlDecode(base64Data, 'UTF-8');
         
-        // inserting file
+        // inserting fil
         ContentVersion cv = new ContentVersion();
         cv.Title = strFileName;
         cv.PathOnClient = '/' + strFileName;
