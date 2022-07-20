@@ -30,25 +30,25 @@ jobs:
               id: pmd-full-analysis
               run: ~/pmd/bin/run.sh pmd -d force-app -R pmd/ruleset.xml -f text
               
-              run: echo {{$jobs.pmd-run.steps.pmd-full-analysis.outputs}}
-                   action-pull-request:
-                      runs-on: ubuntu-latest
-                      steps:
-                      - name: Checkout repoistory
-                        uses: actions/checkout@v2
-                        with:
-                          fetch-depth: 0
-                      - name: Run the Action
-                        if: startsWith(github.ref, 'refs/heads/feature')
-                        uses: devops-infra/action-pull-request@v0.4.2
-                        with:
-                            github_token: ${{ secrets.GITHUB_TOKEN }}
-                            title: ${{ github.event.head_commit.message }}                           
-                            source_branch: featureWI22
-                            target_branch: development
-                            body: ${{ github.event.head_commit.message }}
-                            reviewer: niteshkodle
-                            assignee: niteshkodlects
-                            label: label
-            
+              
+    action-pull-request:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Checkout repoistory
+          uses: actions/checkout@v2
+          with:
+            fetch-depth: 0
+        - name: Run the Action
+          if: startsWith(github.ref, 'refs/heads/feature')
+          uses: devops-infra/action-pull-request@v0.4.2
+          with:
+              github_token: ${{ secrets.GITHUB_TOKEN }}
+              title: ${{ github.event.head_commit.message }}                           
+              source_branch: featureWI22
+              target_branch: development
+              body: ${{ github.event.head_commit.message }}
+              reviewer: niteshkodle
+              assignee: niteshkodlects
+              label: label
+              
      
