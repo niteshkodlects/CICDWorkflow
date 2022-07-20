@@ -2,6 +2,10 @@
 private class AccountServiceTest {
     @isTest static void myTest() {
         AccountService.getAccounts('None');
+        account a=new Account(name='abc')
+        insert a;
+        insert   Opportunity testOpportunity = new Opportunity(Name = 'Test Opp', CloseDate = Date.today(), accountid=a.id,StageName = 'Qualification');
+        insert testOpportunity;
         System.assertEquals(21.11,21.11);
 
     }
