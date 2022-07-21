@@ -2,7 +2,7 @@ import { LightningElement, wire } from 'lwc';
 import getCars from '@salesforce/apex/CarController.getCars'
 import getAccounts from '@salesforce/apex/AccountService.getAccount'
 import {subscribe,MessageContext} from 'lightning/messageService'
-import CARS_FILTERED_MESSAGE from '@salesforce/messageChannel/carsFiltered__c'
+//import CARS_FILTERED_MESSAGE from '@salesforce/messageChannel/carsFiltered__c'
 export default class CarTileList extends LightningElement {
 cars
 error
@@ -24,7 +24,7 @@ connectedcallback(){
     this.subscribeHandler()
 }
 subscribeHandler(){
-this.carFiletrSubscription=subscribe(this.MessageContext,CARS_FILTERED_MESSAGE,(message)=>this.handleFilterChanges(message))
+//this.carFiletrSubscription=subscribe(this.MessageContext,CARS_FILTERED_MESSAGE,(message)=>this.handleFilterChanges(message))
 
 }
 
