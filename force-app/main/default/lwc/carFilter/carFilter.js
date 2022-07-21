@@ -4,7 +4,7 @@ import CAR_OBJECT from '@salesforce/schema/Car__c'
 import CAR_FIELD from '@salesforce/schema/Car__c.Category__c'
 import CAR_FIELD_MAKE from '@salesforce/schema/Car__c.Make__c'
 import {publish,MessageContext} from 'lightning/messageService'
-import CARS_FILTERED_MESSAGE from '@salesforce/messageChannel/carsFiltered__c'
+
 
 import getAccounts from '@salesforce/apex/AccountService.getAccount'
 export default class CarFilter extends LightningElement {
@@ -51,9 +51,9 @@ export default class CarFilter extends LightningElement {
 
     sendDataToCarList(){
 
-        publish(this.messageContext,CARS_FILTERED_MESSAGE,{
+       /* publish(this.messageContext,CARS_FILTERED_MESSAGE,{
             filters:this.filter
-        })
+        })*/
     }
 
 }
