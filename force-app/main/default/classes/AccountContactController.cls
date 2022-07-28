@@ -5,7 +5,7 @@ public with sharing class AccountContactController {
     }
 
 
-    //Get contacts
+    //Get contacts added comment
     @AuraEnabled
     public static List<contact> getcontacts(string accountName){
         try {
