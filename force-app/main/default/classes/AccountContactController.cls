@@ -13,8 +13,7 @@ public with sharing class AccountContactController {
             return [select Id,Name,FirstName,LastName,Title,Phone,Email from contact where account.name like :accountName];
         } catch (Exception e) {
 
-            //comment 
-            throw new AuraHandledException(e.getMessage());
+           
         }
        
     }
