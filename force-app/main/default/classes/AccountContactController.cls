@@ -1,5 +1,5 @@
-//public with sharing class AccountContactController {
-    public  class AccountContactController {
+public with sharing class AccountContactController {
+    //public  class AccountContactController {
     //Constructor code here
     public AccountContactController() {
     }
