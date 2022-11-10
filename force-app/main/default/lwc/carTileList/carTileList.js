@@ -5,7 +5,7 @@ import {subscribe,MessageContext} from 'lightning/messageService'
 //import CARS_FILTERED_MESSAGE from '@salesforce/messageChannel/carsFiltered__c'
 export default class CarTileList extends LightningElement {
 cars
-error
+egirror
 carFiletrSubscription
 filter={}
     @wire(getCars,{filter:'$filter'})
